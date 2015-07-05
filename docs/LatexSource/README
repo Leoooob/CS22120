@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx,vhistory,listings,hyperref}
+
+
+\begin{document}
+
+\title{Group 9 \protect\\ README}
+\author{Leon Hassan \and Rowan Marshall}
+
+ \maketitle
+\clearpage
+
+
+
+\section{Website}
+\subsection{Deploying the website}
+
+To deploy the website yourself you must copy the "\textit{G9 cs22120}" folder to your "\textit{public\_html}" folder. Then you must open "\textbf{\textit{the api\_recording.php}}" file and change the aber user "\textit{\$aber\_user}" to your own (as is commented in the code). You must then fix the web permissions for each file, you can do this via \textit{PuTTy} by SSH'ing into central and then entering the space where the website has been placed (inside your public\_html folder) and then either fixing each file's permissions one by one using the \textit{\textbf{chmod}} command (followed by the 700 for php files, or 644 for html files), or by running the command \textit{\textbf{fixwebperms}} to fix all of the files in your current directory (and all subdirectories contained).
+
+
+\subsection{Using the website}
+
+The \href{http://users.aber.ac.uk/pus1/cs22120/}{\textbf{website URL} \footnote{http://users.aber.ac.uk/pus1/cs22120/}} is for Punit's userspace, you can access this on the internet. The source files for the website are included on this disc if you would like to deploy it yourself.
+\noindent When you first enter the website you will be taken to the home page, which displays the reserves that have been added by us. You can click on a reserve to view the recordings it contains.\\
+
+\noindent To add, edit or delete reserves and recordings you will have to log-on with the admin password, currently "\textit{g9admin}". When logged in, the options to add, edit and delete reserves and records will appear according to the page you are on.
+
+\noindent To add a reserve click "\textit{Add reserve}" button on the homepage. You will then be taken to a reserve details page, enter the requested data and click "\textit{Add reserve}".
+
+\noindent To edit a reserve you click "\textit{Edit reserve}" button on the homepage. You will then be taken to the reserve's details page. You can then edit the data to what you want (still accountable to validation) and submit your changes by clicking the "\textit{Edit reserve}" button.
+
+\noindent To delete a reserve you click "\textit{Delete reserve}" button on the homepage. There will then be a warning pop-up menu asking if you are sure you want to delete the reserve.
+
+\noindent The process for adding, editing and deleting record data is exactly the same, the only difference is the page on which you can access these buttons (the \textit{\textbf{Records}} page) and the fact that you must select the individual records via radio buttons.
+\clearpage
+
+
+
+\section{Android app}
+\subsection{Deploying the app from Android Studio}
+
+You open the project (on this CD under the directory \textit{G9 Android App project}) using the latest version of \href{http://developer.android.com/sdk/index.html}{\textbf{Android Studio} \footnote{http://developer.android.com/sdk/index.html}}. You then press the run button (big green arrow) that will compile the project and then ask which emulator you would like to run the application on. If you have an Android phone plugged into your computer, it will appear in the list of emulators. You then select the emulator you want and the application will be opened automatically.
+
+\noindent We recommend (for virtual emulators) the Google Nexus 5 running Jellybean (API v18) with all the recommended allowances for RAM, CPU etc.
+
+
+\subsection{Using the app}
+
+When you open the app you are taken to the \textit{\textbf{Reserves}} page, which lists all of the reserves currently stored on your phone (not uploaded to the server yet). You can create a reserve by clicking the "\textit{Create}" button at the bottom of the screen.
+
+\noindent You must then enter the reserve data, and your user data (this information will be validated). You must then click the "\textit{Next}" button, upon clicking this you will then be taken to the \textit{\textbf{Recordings}} page. At the top of the page you have the option to upload and delete the reserve. The page itself will display all of the recordings in the reserve. To add a recording to this reserve you must click the "\textit{Create recording}" button at the bottom of the page.
+\noindent When you click this button you are taken to the \textit{\textbf{Species details}} page, where you must enter the details of the recording. The Latin name for the species will auto complete when you begin typing. When you select a Latin name for the recording the rest of the data will also auto complete. After completing the species details you will see the recording details (by scrolling down the page). You must input an abundance for the species (via dropdown menu), the location of the species is taken from the GPS of your phone. There are then optional details you can add such as a comment or photos of the specimen and it's area. To attach photos to the record you can either open your gallery (by clicking the gallery tile in the corresponding area, or taking a photo (by clicking the camera tile) and then selecting it from your gallery. After you have finished filling out these details you can save the recording by clicking the "\textit{Save recording"} button at the bottom of the page.
+\noindent You will then be taken back to the \textit{\textbf{Recordings}} page. To edit a recording you click on the recording itself (on this page) and you are then taken to the \textit{\textbf{Species details}} where you can edit the details.
+\noindent To delete a specific record you click that record and are taken to the \textit{\textbf{Species details}} page (the same as editing the record) and at the top of the page you can delete the record by clicking the "\textit{Delete record}" button.
+
+\begin{figure}[b]
+\begin{versionhistory}
+  \vhEntry{0.0}{26.01.15}{leh28}{Created document outline}
+  \vhEntry{1.0}{27.01.15}{leh28,ram32}{Populated document with relevant data}
+  \vhEntry{1.1}{27.01.15}{leh28}{Added deployment instructions for both the Website and Android app}  
+  \vhEntry{1.2}{27.01.15}{ram32}{Proof read and spell-checked the document}
+\end{versionhistory}
+\end{figure}
+
+\end{document}

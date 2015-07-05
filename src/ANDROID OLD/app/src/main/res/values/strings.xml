@@ -1,0 +1,17 @@
+<resources>
+  <string name="app_name">RPSRrec</string>
+
+  <!-- Activity labels (titles) -->
+  <string name="activity_visit_list">Visits</string>
+  <string name="activity_visit_details">Visit details</string>
+
+  <!-- Menu actions -->
+  <string name="action_new_visit">Add visit recording</string>
+  <string name="action_new_species">Record a new species</string>
+  <string name="header_visit_information">Visit Information</string>
+  <string name="hint_site_name">Site</string>
+  <string name="hint_user_name">Name</string>
+  <string name="hint_user_phone_number">Phone number</string>
+  <string name="hint_user_email">Email address</string>
+  <string name="header_species">Species</string>
+</resources>

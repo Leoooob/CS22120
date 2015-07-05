@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{vhistory,textcomp,fancyhdr,lastpage}
+\usepackage[a4paper,left=3cm,right=3cm]{geometry}
+
+\pagestyle{fancy}
+\setlength{\headheight}{14.5pt}
+\fancypagestyle{headerfooter} {
+	\fancyhf{}
+	\lhead{\footnotesize{Title of document}}
+	\rhead{\footnotesize{Version 1.0}} % change to latest version
+	\lfoot{\footnotesize{Aberystwyth University / Computer Science}}
+	\rfoot{\footnotesize{Page \thepage~of \pageref{LastPage}}}
+}
+
+\title{Title of document}
+\author{Punit Shah \and Author Two} % add/remove '\and' commands as necessary
+\date{1\textsuperscript{st} January 3000} % change to date of last revision
+
+\begin{document}
+
+\maketitle
+\thispagestyle{headerfooter}
+\pagestyle{headerfooter}
+
+\begin{center}
+	Config Ref: \\ % add configuration reference
+	Version: 1.0\\ % change to latest version
+	Status: Draft\\ % other permitted values: For Review, Release
+	~\\
+	Department of Computer Science\\
+	Aberystwyth University\\
+	Aberystwyth\\
+	Ceredigion\\
+	SY23 3DB\\
+	Copyright \textcopyright~Aberystwyth University
+\end{center}
+
+\clearpage
+
+\tableofcontents
+\clearpage
+
+\section{Introduction}
+	\subsection{Purpose of this Document}
+	purpose of document goes here
+	\subsection{Scope}
+	scope goes here
+	\subsection{Objectives}
+	\begin{itemize}
+		\item objectives go here
+	\end{itemize}
+
+\section{Specific Section}
+Add sections specific to the document here.
+
+\section{References}
+N/A % add references if any
+
+\begin{versionhistory}
+  \vhEntry{0.0.0}{01.01.3000}{Punit Shah}{Initial document}
+  \vhEntry{1.0.0}{01.01.3000}{Punit Shah}{Version 1} % etc
+\end{versionhistory}
+
+\end{document}

@@ -1,0 +1,301 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx,vhistory,fancyhdr,lastpage}
+
+\pagestyle{fancy}
+\setlength{\headheight}{14.5pt}
+\fancypagestyle{headerfooter} {
+	\fancyhf{}
+	\lhead{\footnotesize{Group 9 - Project Maintenance Manual}}
+	\rhead{\footnotesize{Version 1.5}}
+	\lfoot{\footnotesize{Aberystwyth University / Computer Science}}
+	\rfoot{\footnotesize{Page \thepage ~of \pageref{LastPage}}}
+}
+
+\begin{document}
+
+\title{Group 9 \protect\\ End of Project Report}
+\author{Leon Hassan \and Rowan Alexander Marshall}
+
+ \maketitle
+ \thispagestyle{headerfooter}
+ \pagestyle{headerfooter}
+ 
+  \begin{center}
+	Config Ref: SE\_09\_END\_05 \\
+	Version: 1.5 \\
+	Status: Release\\
+    ~\\
+  Department of Computer Science\\
+  Aberystwyth University\\
+  Aberystwyth\\
+  Ceredigion\\
+  SY23 3DB\\
+  Copyright \textcopyright~Aberystwyth University
+ \end{center}
+ 
+\clearpage
+
+\tableofcontents
+\clearpage
+
+\section{Introduction}
+	\subsection{Purpose of this Document}
+		The purpose of this document is to give an insight into how we performed as both a group and as individuals during the group phase of this project. To highlight where we have performed well, where we have performed poorly and what could have been done differently. This document should also include how the I (the project leader) feels about each individuals performance throughout the module.
+   		%The purpose of this document is to show what we did right, explain what we did wrong and why, and to give a review of each team member.
+    
+    \subsection{Scope}
+		This document will cover what we wanted to achieve, what we did achieve and an analysis of the difference between these. It shall also cover a performance review of each member of group 09
+    	%This document will cover what we achieved, why we achieved it, and a performance review of each of our group members. 
+    
+    \subsection{Objectives}
+      The objectives of this document are:
+      \begin{itemize}
+          \item	To identify and analyse our performance through this project as a group
+          \item	To identify and analyse our performance through this project as individuals
+          \item	To identify where we could have improved our work, workflow and software process
+          \item	To show what we achieved in this project and reflect on what we thought we would achieve
+          \item	To highlight how each individual in this group has grown throughout this module.
+      \end{itemize}
+      %The objectives of this document are to see what we did right
+    
+\clearpage
+\section{Management Summary}
+	In this project we have achieved the creation of a well-designed, functioning Android application and an intuitive, aesthetically pleasing website that is compatible on a variety of devices and resolutions.
+	
+	\subsection{Android Application}
+		When we were beginning this project the main worry was the Android application. In our group we had people drop out very early on (who were assigned to the application) and this damaged the App teams confidence I believe. We at first elected Tom G. our group leader because he not only had experience producing Android applications, but seemed to be our strongest programmer. Unfortunately due to medical reasons Tom could not keep up with the work load of group leader and I was elected group leader in November.
+		\noindent Unfortunately the app progress was very slow due to various conflicting elements eg. In early stages of the project we had a research topic assigned to us and most of these were not divided according to the role people wanted, for instance we had Punit (who was and is a member of the web dev team) researching how an Android application can send and structure an HTTP request and send that to a server. Because of this Punit could not fully convey the information to the rest of the team, or cover it in the amount of detail that would have been useful to the app development team. Because of events like this taking place we had a variety of Git conflicts leading up to our Prototype deadline, at this point we held a meeting where only half of the group attended and most of the attendees were those who had risen worries but could not resolve them. (October, link minutes from meeting)
+		\noindent It was at this point in early October that I began to organise the group due to Toms longstanding absences from group meetings. My first act was to organise the app dev team into a proper team with dedicated roles and with this we got our prototype sorted after a few days of work. It was after this that we, as a group, started to really crack down on people who were actually submitting work, but not turning up to meetings. Because of this Tom started to attend again but others (eg. Geraint) did not. Unfortunately not a lot changed with the app over the next few weeks (up to Christmas) because nobody on the team knew what they were doing anymore, with John Batty who designed the UI for the app in our prototype conflicting with Tom who wanted to redesign the UI into something more feasible for both us the developer and the user. 
+		\noindent Early November is when the group as a whole started to really panic about the state of the app and the time we had left to complete it. Because of this I was elected group leader. Upon being elected I created a task list for both the web and app teams, delegated these lists to the respective managers and set the deadlines for each task. because of this we had a rough app outline by the time we got to the Christmas holidays.
+		\noindent There was communication over Christmas but only so far as organising the task list, to make sure that all tasks were completed and up to a standard that the team involved felt comfortable. \\
+
+		\noindent Then began work week, and this is where I feel the app team really turned up and began to show what they could do as a unit. In the space of 5 days we moved from a prototype application that had no functionality into a full fledged Android app with full functionality, an intuitive UI and communication with database.
+		\noindent Our first day of app development I took Jack Cridland, app team leader, and we sat down for ten minutes and went through a list of requirements for the application and broke these requirements into discrete tasks. From this we created a list of tasks and divided it between the app tea members. 
+
+		\begin{description}
+			\item[Jack]	was in charge of creating a minimal working example of Android GPS functionality, including but not limited to storing location data, accessing the phones GPS and declining to move further in a program without GPS access. After this Jack worked with Geraint to create unit tests for the application. Unfortunately Jacks progress on the GPS functionality hit a wall of sorts after the first day where he had unknown errors that were stopping him from accessing the data he had pulled from the Androids GPS.
+
+			\item[Tom]	was in charge of reskinning the entire app so that it would be ready when the time came to integrate the separate functionalities into the main product, and after this worked with Punit on the web team to create the HTTP request sent from the application to the server when uploading information. I feel that Tom performed particularly well in work week, he not only took on the more difficult of tasks for the application, but also did fantastic jobs on all of these tasks. Considering how poor his attendance and involvement with the group until now, I think it was a massive step up.
+
+			\item[Geraint]	was in charge of photo intent, which is taking a picture, accessing the gallery and creating a thumbnail for photos selected to be attached to a record. After this Geraint started to add validation to the app ensuring that the server was protected from SQL injections and that our validation delivered error messages to the user, upon finishing validation he then worked with Jack to create unit tests for the application. I felt that Geraint performed very well during work week. Not only did he complete his task quickly, but had also prepared himself tasks to improve the functionality he had implemented and took it upon himself to make sure that everyone working on the app team were working in adherence to coding standards by enforcing comments etc. Once again, considering his prior attendance (1 meeting out of the entire semester) and complete lack of communication with the group, I think has performed fantastically during this week.
+
+			\item[John B]	had the job of getting camera and gallery functionality into a minimal working example alongside Geraint but after a the first day it was clear that programming is not Johns strong point. I then set him the task of creating a minimal working example for creating and sending a generic HTTP request of type MIME, but again after a day of work had very little to show for it. It was now that I set John the job of creating automated tests (using Robot Framework, used for our website) for our Android application. After a day and a half I asked John to show me what had to show and he had only managed to install the software required and said that he did not understand what he was meant to be doing.This is when I sat down with John and explained to him what the framework was, how it worked and how he should be writing tests. Unfortunately it was here we discovered that the Android library we were using for Robot framework was actually outdated and would not work for us. John then looked into Robotium which we would have liked to use but it was not a freeware like Robot. Overall I feel that John under-performed in this crucial time, as well as regularly come in late due to "sleeping in".
+		\end{description}
+		
+		\noindent Unfortunately there were a few delays in getting started on the app dev tasks because of Android Studio needing to be updated and install a lot of patches, we subsequently lost a few man-hours of work because of this.
+		
+
+	\subsection{Website}
+		
+		The Website started off at runaway speeds. The web development team were self-sufficient and focused on improving the site as well as meeting the requirements set before them. This was mostly due to John Friend, web team leader, who had a quality standard he thought the site should meet, and would not stop until it indeed met this standard. John straight away was offering his opinions to the group, which was actually something sorely lacking up until October. John wanted the webite to use BootStrap, which is a web framework that enforces house style in a variety of ways eg. Enforcing a set clour palette.
+		\noindent Due to the use of this framework it was a matter of days before the website could be viewed by anyone in the group and it looked almost as good as it does now. The web team focused on creating a style and consistency with this website before anything else, and looking back at this I am very glad that they did this. (MENTION THIS LATER ON)
+		\noindent Thankfully the web team managed the prototype for the deadline with relative ease, the only questions they asked of the group were what data do reserves and records need, how should they be displayed and would you like to test the interface. The web prototype looked good and we were excited to get functionality into it. \\
+
+		\noindent Over Christmas John F set up a MySQL database on an external server that was owned by a friend of his, unfortunately when we got to work week we found out (the hard way) that we could not access this database because of restrictions in place by either IS or Eduroam. So John emailed cs-support asking for a database and then came to tell me what had happened and what he had done because of it.
+		\noindent When we received our database from cs-support, the web team were rearing to go but no one on the team had ever set up a database before and asked me to do it because I have had some experience with database management. So the database was set up and the tables created in line with our database specification but when we tried to populate our \textit{Species} table we could not import an Excel spreadsheet using the MySQL plugin for Excel. We then converted the file into a CSV format and tried to import the CSV file, unfortunately OS-X ends a line in CSV format differently from what MySQL expects and this did not work. I then went upstairs to the Delphinium to convert the spreadsheet to CSV, I then brought the file back downstairs and tried to import it again. This time there was an install error telling me that I could not import a file because I was missing a module for MySQL Workbench. At this point I found an online converter and created an 8000 line SQL insert command, it crashed a few times but eventually ran and fully populated the table. At this point we decided that we did not like Macs.
+		\noindent Now that the database was finished and populated, I sat down with John F, web team leader, and we sat down for ten minutes to go through a list of requirements for the website, and broke this into tasks. We then realised that we could move these tasks into three groups, displaying data, taking user data and validation + sanitisation of this data, and web-app communication. We then assigned roles, then tasks to each member of web. They are as follows:
+
+		\begin{description}
+			\item[John F]	was in charge of creating the forms needed for the website as well as validating the information. John also maintained a list of small bugs and discrepancies between pages and kept this updated and in clear view of the web dev team. Once John had finished creating his forms and adding a variety of validation to them, I set him the task of writing automated tests for the website alongside Rowan once I had finished giving him a crash course in Robot Framework. With Rowans help John successfully wrote some automated tests that tested features such as logging into the website, we ran these as regression tests to make sure that when the website was changed, nothing was broken because of the changes. This set of automated tests were ran everytime a non-trivial change was made to the website, it proved very helpful when we discovered that Kamil had a typo when updating his SQL queries. I feel that John performed well during coding week as he not only managed to keep the web team moving along at a fast pace but also kept me informed of any and all issues that his team ran into along the way.
+			\item[Kamil]	was in charge of displaying the data and sorting through it as tables. Kamil quickly progressed through the week writing excellent, secure code and when he ran into an issue regardless of severity would go to John F, his manager, and expressed his concerns. 
+			\item[Punit]	was in charge of creating a web API for the app to communicate with when uploading data and making sure that the web-code was all following the same programming style. Unfortunately this did not progress as quickly as I, or the app team, had hoped. This was due to Punits constant tardiness not only arriving late, but coming back from lunch late as well. Although Punits work was good, he was not always around when we needed him and at one point had to stay at work longer (and by proxy, caused Tom to stay late) because Tom was waiting on him to complete his task so that they could move on.
+		\end{description}
+
+		\noindent Although we had the day-long delay due to the database issue mentioned, I feel that the Web team did an excellent job overall. I feel that their communication, not only within their team but with the rest of the group was fantastic.
+
+
+	\subsection{Quality Assurance}
+		
+		I believe that the QA team have been strong since the beginning of this module and only got better as it went on. At the start of the module I would handle writing the documentation whilst Rowan would focus on creating an easy-to-read requirement specification for the various areas of development. This was because I am a strong LaTeX author having used it constantly since being introduced to it in first year, while Rowan had not gone near it since.\\
+		\noindent Unfortunately due to a combination of the absence of a group leaders input on our documentation and inexperience on behalf of the QA team our documentation was marked repeatedly as average to sub-par. Because of this around October Rowan and I tried to get Tom more involved with documentation because it was his job to create document references etc. At this point our design documents were due, but due to poor group communication the various different parts of our designs arrived stuttered and in some cases severely inadequate. Myself and Rowan managed to with the help of Jack Cridland and John Friend put together rough design documents for both the website and application. We could not get in touch with Tom to discuss his database plans, but between the rest of the group we managed to create a design spec for the database. Due to our inability to reach Tom at critical deadlines the group decided to elect me group leader. At this point I had to start delegating more of the documentation to Rowan because of the new workload. I acted as an advisor to Rowan while he learned the ins and outs of LaTeX.\\
+		\noindent Thanks to this, Rowan became adept at writing in LaTeX as well as trouble shooting his markup. This proved helpful when we were creating bare-bones documents that we would populate at a later date.\\
+		\noindent I discussed with Rowan around the time of our Test Specification deadline that I would like to implement automated testing on the website at the very least. I then explained that when I worked over summer as a QA engineer I managed to implement automated testing for the company and thought it would be an excellent tool to have at our disposal, especially when used for regression testing. We agreed we would attempt to implement this, once we had a functional site.\\
+		\noindent At the beginning of work week we had the various delays and because of this, I was pulled to work on the database for the first day and Rowan set himself the task of compiling a list of requirements for both the website and application. I believe this is illustrative of how independent Rowan has been throughout this module, where he is not assigned work he will find work that will not just benefit him, but the group as a whole.\\
+		\noindent After both the web and app teams were underway with work Rowan and I got to work testing the site and app and where the designs had been updated/adapted we updated our test cases. Once we were at the back-end of the week and only really had regression testing left to do, we began to work on automated test cases on both the website and application. The web-testing I let Rowan handle because I had made sure that he was prepared and understood how to write tests for websites. I took on the task of trying to use the Android library for the testing framework we were using, this was later delegated to John B on the app team because he could not complete his research on HTTP requests.\\
+		\noindent As the week came to a close, myself and Rowan found ourselves with less and less to do. Because of this I took over regression testing and he began to build the bare-bones of this E.o.P report. Overall I think that the QA team have been consistent in quality, but learned a lot during the course of this module about what exactly was expected of us.
+
+
+%In one page, sum up what the project achieved, what difficulties were encountered,
+%how they were overcome, and how well the team as a whole performed.
+
+\clearpage
+\section{Historical Account}
+	\subsection{Overview}
+      The main events in our project timeline are:
+      \begin{description}
+        	\item[06-27 Feb]	Project Plan
+        	\begin{itemize}
+				\item	Basic role delegation
+				\item	Basic deadline overview
+				\item	Functional requirements
+            \end{itemize}
+        	\item[27 Feb-03 Nov]	Test specification
+        	\item[10-24 Nov]	Design Specification
+        	\begin{itemize}
+				\item	App design spec
+				\item	Website design spec
+				\item	Database Schema/design spec
+            \end{itemize}
+			\item[01 Dec]	Prototype deliverable
+        	\item[01-08 Dec]	Dependency checks
+        	\item[21-27 Jan]	Work week
+        	\begin{itemize}
+				\item	Android app
+				\item	Website
+				\item	Database
+                \item	Testing
+                \item	Documentation
+            \end{itemize}
+        	\item[27 Jan-16th Feb]	Project Report
+      \end{description}
+    
+    \subsection{Project Plan}
+    	The project plan was largely a shambles. Our group leader of the time (Tom) had literally zero communication with the group outside of our Managerial meetings (headed by our 'client'). Because of this we ended up deciding in a meeting (where Tom was not present) that we would each take a section of the plan to complete, each task being derived from the QA documents that Rowan went through, and send it to me to put together into one document. Unfortunately various members were either late in submitting their section and others did not submit a sufficient write-up. Because of this we ended up submitting a half-baked document. Over time Rowan and I took over getting this document up to scratch and making sure that it was kept up to date.
+
+
+    \subsection{Test specification}
+    	The test specification was completed by the QA team (myself and Rowan). I wrote up the basis of the document and filled out all of the Android applications test scripts. Rowan then looked at what I had done and created the test scripts for the website. This section of our documentation was apparently lacking as we scored a relatively low mark (C overall, I believe). We believe this was down to not knowing exactly how to structure the document as well as not knowing the exact level of detail we were required to go into.
+
+
+    \subsection{Design specification}
+    	The design specifications were split between the respective roles (app, website and database). They were off to a slow start due to the start of deadlines from other modules and a general lack of any impetus to work. It was around here the core members of the group started to pull together. It was at this time we officially appointed myself as group leader, Jack Cridland as App leader and John Friend as Website leader. Jack and John took control of their respective design documents and the Database design spec was given to Tom. \\
+        \noindent Both the App and Website design specs progressed smoothly and quickly from this point. Tom submitted what was essentially a schema for the database design spec, so I reworked it into the kind of document we needed. It was at this point the group as a whole tried to talk to Tom about his lack of interaction with the group and our lack-of-contact with him. The situation didn't improve so we went to Nigel (our client/project mentor). After this the situation did begin to improve. 
+
+
+    \subsection{Prototype deliverable}
+    	Our prototype was created quite quickly. The web team had been working on their product throughout the project at this point and had lots to show. With dummy data populating the tables where our 'real' information would be shown the site looked fantastic. The Android app took a little longer to get ready and was created mostly by John B, reflecting on this later we realised that this wasn't how we should have approached the prototype.\\
+        \noindent The Android app was largely a walk-through of the GUI, it had no real functionality but was our idea of how the app should look and work.\\
+        \noindent Overall I believe our prototype hand-in went well and that we achieved what we needed to.
+
+
+    \subsection{Dependency checks}
+    	At this stage we broke down the core aspects of both the Android app and website and created a diagram to show the dependencies between them. This was very helpful as a rough guide during work week as it allowed us to get the information we had missed in the requirement specification at a glance.
+        \noindent I think that this particular task was completed in good time, readying us for work week.
+
+
+    \subsection{Work week}
+    	This section is covered largely in the Management summary. I believe that overall we completed our work in good time, although a few aspects could have been completed in a more timely manner. For instance Jack's work on the Android GPS functionality took much longer than expected due to elusive bugs. It also would've been better if John B had been able to complete his tasks without me having to move him from task to task without him managing to complete any of them properly or in a timely manner. \\
+        \noindent It was in work week that we realised John B's work on the Android app had been insufficient. The code was unkempt and largely unusable when attempting to add functionality to the interface. Because of this Tom had to spend the first two days or so reworking the interface of the app so that we could add functionality to it. \\
+        \noindent It was in work week that both Tom and Geraint really got stuck into work and really joined the group. Both of them performed very well throughout this period, completing their work to a high standard and quickly. Without either of them, we would not have such a polished Android application.
+
+
+    \subsection{Project report}
+    	The project report has been a large task, I believe it gives an honest and accurate report of group 09 throughout this project.
+
+%Outline the main events over the lifetime of the project, and how we used the time we had to produce a plan
+\clearpage
+
+\section{Project Final State}
+	I believe we have ended with a fantastic app and website that not only behave the same, but look like they both came out of the same packaging. There is a unified GUI across our Android application and Website. We're also proud that we were able to send (an almost fully functional) HTTP request to the website from our application to our webserver, where the data was added to the database via the website. This saved us from performing a multitude of read/write operations to the database from both the Application and Website. We are also very happy that we managed to complete an "Admin"-section for the website, where a user can login as an admin and is then allowed to edit various entries. \\
+    \noindent Unfortunately due to a bug in the HTTP library we used for Android we could not attach pictures to our request. By the time we had realised that we could not attach the photos to our request, it was too late to rectify the error. We tried to set up another (separate) request that would send photograph data, that would follow the original HTTP request. Because of this the website does not display images when looking at Reserves and individual records.\\
+    \noindent We completed documentation for the following items:
+    \begin{itemize}
+    	\item	Project Specification
+    	\item	Design Documentation
+        \begin{itemize}
+        	\item	Android App
+            \item	Website
+            \item	Database
+        \end{itemize}
+        \item	ReadMe
+    	\item	Maintenance Guide
+    	\item	End of Project Report
+    \end{itemize}
+    
+    \noindent I am very happy with the vast majority of our documentation. Although a few of our documents had their bumps, they all ended relatively well. The Maintenance Guide unfortunately took longer than we had hoped and was a slight kerfuffle to get sorted. Many wires were tangled but after we had a meeting it we sorted all of our documentation and made sure that we were all happy with it. 
+	%		talk about documentation, should all be spiffy
+
+
+%Give a summary of which sections of the project are good, and which are not.
+%Be accurate, as marks are deducted for problems found that are not discussed.
+%Mention known problems with documents as well.
+
+\section{Performance of team members}
+	\subsection{Anna Laura Zielinska}
+    	\subsubsection{First semester}
+			Anna attended some meetings, she couldn't attend most of the Wedesnday meetings and usually left early/arrived late to the Monday meetings. Unfortunately Anna worked part time more than she should have as she missed a lot of the group discussions and meetings which in turn lead to us not really being able to give her much work because we didn't know what her skill set was.
+
+    	\subsubsection{Work week}
+			In work week Anna turned up for roughly 10 minutes (on day one) in total. She did ask for work when she was here, but we didn't know what to give her to work on. Unfortunately Anna didn't come to anymore of work week so we collectively decided not to give her work because we weren't sure if it would be completed and didn't want to risk waiting on it. 
+         
+
+    \subsection{Geraint Thomas}
+    	\subsubsection{First semester}
+			Geraint only ever turned up to a single meeting and we didn't have a method of contact with him (aside from his Abermail) which was not checked regularly.
+
+    	\subsubsection{Work week}
+			In work week Geraint created himself a Facebook account so that we could reach him easily and he was kept in the loop as far as our start/end times for the week were concerned.\\
+            \noindent Geraint did excellent work throughout work week. He arrived generally on time all week and finished all his tasks quickly and made sure that he always had something to do. A massive improvement upon his first half of this project. Without Geraint I don't think that the Android application would have been as well presented or robust (in terms of validation) as it is.
+         
+
+    \subsection{John Batty}
+    	\subsubsection{First semester}
+			John took minutes at our meetings and worked exclusively on the Android application's GUI. Unfortunately much of his work was largely gibberish or unnecessary with chunks of code left in from when he had been testing something. 
+
+    	\subsubsection{Work week}
+			John worked on a ragtag assortment of tasks throughout this week because he could not seem to fully finish his tasks. It was also brought to our attention in work week just how poorly documented and maintained the GUI code from the Android app was. John was consistently late to our working room and did not perform as well as I had thought he would in this week. Occupying himself largely with the internet when he should have been either working or coming to Jack or myself with his issues he instead wasted his time away until either myself or Jack approached him and asked him what exactly he was working on.
+         
+
+    \subsection{John Friend}
+    	\subsubsection{First semester}
+			Throughout semester one John worked hard and managed the other web team-members. John set out his vision for the website and the other web developers followed him. I think that this is the reason that our website has had very little aesthetic change between the prototype and end product. John was an invaluable member of this group.
+
+    	\subsubsection{Work week}
+			In work week John kept a close eye on the other members of the web team and was constantly checking up on them to make sure that they were getting on okay with their workload and making note of any issues or potential problems. He also tallied everyones hours for the week and processed them in an Excel spreadsheet to make my writing of the End of Project report easier.
+         
+
+    \subsection{Jack Cridland}
+    	\subsubsection{First semester}
+			In the beginning of the semester Jack was elected deputy group leader, up until around November he didn't really know what to do because he didn't have a group leader to work with. He helped out in our meetings and various discussions but didn't really get a handle on things until around November where he really helped to take charge of the group (Android app, specifically). Jack also took charge of creating our Gantt chart once we were getting on track as a group.
+
+    	\subsubsection{Work week}
+			During work week Jack worked mostly on the Android GPS functionality, it took him almost double the time we thought due to bugs that weren't found until we tried to implement the functionality into the app itself. Unfortunately this lost Jack roughly two days where he was meant to be producing unit tests for the app. Thankfully Jack managed to to produce all the needed unit tests in the time left with a little help from myself and Geraint.
+         
+
+    \subsection{Kamil Lewinsky}
+    	\subsubsection{First semester}
+			Kamil knew when he started that he wanted to work on the website and he's proven why he should be working on the web through and through. Kamil was very quiet throughout group meetings and discussions throughout first semester. He always got his work done and would always have a little extra to add to the site.
+
+    	\subsubsection{Work week}
+			In work week Kamil really came out of his shell, getting more and more involved with the group as a whole and sharing his ideas on not just the website, but the app too. Kamil completed the bulk of the website himself and without him the website would probably not have the amount of functionality that it does.
+         
+
+    \subsection{Punit Shah}
+    	\subsubsection{First semester}
+			In the first semester Punit attended roughly half of the meetings, usually turning up late. Originally he wanted to work on the app, but decided he wanted to change to web after a few weeks. Punit would usually complete his work, but it wouldn't always be on time and would usually require being chased up. Punit would generally stay quiet in group meetings and then bring his issues to individuals after the meeting, where they would be brought up at the next meeting. I'm not sure if this was shyness or something else, but more than once resulted in a rethink of our design.
+
+    	\subsubsection{Work week}
+			In work week I was quite upset with Punit's performance as he not only turned up consistently late, both to the start of the day but also back from lunch. He also progressed very slowly with his work. At multiple points in the last few days of work week Tom was waiting on Punit's work so that we could test our HTTP request from the Android app to the website. Because of this by the time we found out that we couldn't attach photos to our HTTP request it was too late to rework the request using another HTTP library.
+         
+
+    \subsection{Rowan Marshall}
+    	\subsubsection{First semester}
+			Rowan spent most of the first semester getting to grips with \LaTeX but after a few weeks really started to get the hang of it. Rowan largely kept himself to preparing the skeleton of documents and making documents that would explain what other parts of the group needed to do. This was incredibly helpful as it means that the rest of the group could focus on completing the work instead of having to sift through the requirement specifications etc.
+
+    	\subsubsection{Work week}
+			Throughout work week Rowan managed to both, stay on top of documentation + testing and making sure that I remembered to format documentation and check on everyone regularly. Rowan made work week a much \textbf{much} smoother process, without him I think that work week would've been much more tedious.
+         
+
+    \subsection{Tomas Goralczyk}
+    	\subsubsection{First semester}
+			Tom was elected group leader in our first meeting because he had not only published Android apps before, but was also what we felt was our most confident programmer. Unfortunately Tom could not attend a majority of meetings and due to medical reasons could not always communicate with the rest of the group. Tom was originally working on Databases, but eventually moved to Android development.
+
+    	\subsubsection{Work week}
+			In work week Tom turned up on time and in good spirits every day. Tom did the vast majority of the Android GUI himself (as he had to rework all of John B's work), without him the app probably would not have been finished by the time the deadline came around. Tom did fantastic work in everything that he did during this week. From the app GUI to creating the HTTP request. It was unfortunate that when we started to test the HTTP request including the photos we found that there was a bug in the library we were using. I think that Tom performed very well in this section of the project.
+         
+
+\begin{figure}[b]
+\section{References}
+\begin{versionhistory}
+	\vhEntry{0.0}{21.01.15}{ram32}{Created document outline}
+	\vhEntry{1.0}{26.01.15}{leh28}{Populated document Introduction and Management summary}
+	\vhEntry{1.1}{07.02.15}{leh28}{Tidy up of document so far}
+	\vhEntry{1.2}{08.02.15}{leh28}{Populated the Historical Account section}
+	\vhEntry{1.3}{09.02.15}{leh28}{Populated sections 4 \& 5}
+	\vhEntry{1.4}{10.02.15}{leh28}{Second draft of document}
+	\vhEntry{1.5}{16.02.15}{leh28}{Finalised document}
+\end{versionhistory}
+\end{figure}
+    
+    
+\end{document}

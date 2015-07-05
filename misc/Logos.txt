@@ -1,0 +1,7 @@
+Links to logo and favicons
+
+logo: http://s2.ifotos.pl/img/nature2pn_whppenx.png    (tell me if size okay 500x495px)
+favicon1: http://s2.ifotos.pl/img/favicon1j_whppeep.jpg (64x64px)
+favicon2: http://s5.ifotos.pl/img/favicon2j_whppewp.jpg (32x32px)
+favicon3: http://s2.ifotos.pl/img/favicon3j_whppees.jpg (64x64px)
+favicon4: http://s2.ifotos.pl/img/favicon4j_whppewh.jpg (32x32px)

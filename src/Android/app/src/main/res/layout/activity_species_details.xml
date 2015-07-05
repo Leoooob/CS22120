@@ -1,0 +1,227 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#AEE59B"
+              android:orientation="vertical"
+              android:paddingBottom="8dp"
+              android:paddingLeft="8dp"
+              android:paddingRight="8dp"
+              android:paddingTop="8dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="?android:attr/listSeparatorTextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="@string/header_speciesDetails"/>
+
+            <!-- Species latin name. -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hint_speciesLatinName"/>
+
+            <AutoCompleteTextView
+                android:id="@+id/species_latinName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_speciesLatinName"/>
+
+            <!-- Species common name. -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hint_speciesCommonName"/>
+
+            <EditText
+                android:id="@+id/species_commonName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_speciesCommonName"/>
+
+            <!-- Species authority. -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hint_speciesAuthority"/>
+
+            <EditText
+                android:id="@+id/species_authority"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_speciesAuthority"/>
+
+            <TextView
+                style="?android:attr/listSeparatorTextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="@string/header_recordingDetails"/>
+
+            <!-- Recording abundance. -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hint_speciesAbundance"/>
+
+            <Spinner
+                android:id="@+id/recording_abundance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!-- Recording location. -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/hint_speciesLocation"/>
+
+                <TextView
+                    android:id="@+id/recording_locationLatitude"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="0.00"/>
+
+                <TextView
+                    android:id="@+id/recording_locationLongitude"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="0.00"/>
+
+            </LinearLayout>
+
+
+            <!-- Recording date. -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/hint_speciesDate"/>
+
+                <TextView
+                    android:id="@+id/recording_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_weight="1"
+                    android:text="00/00/2014 00:00"/>
+
+            </LinearLayout>
+
+            <!-- Recording comment. -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hint_recordingComment"/>
+
+            <EditText
+                android:id="@+id/recording_comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_recordingComment"
+                android:lines="2"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hint_speciesPhotos"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="General photo"/>
+
+                    <ImageButton
+                        android:id="@+id/action_takeGeneralPhoto"
+                        android:layout_width="match_parent"
+                        android:layout_height="128dp"
+                        android:src="@drawable/ic_camera_roll_black_48dp"/>
+
+                    <ImageButton
+                        android:id="@+id/action_deleteGeneralPhoto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_delete_black_48dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="Specimen photo"/>
+
+                    <ImageButton
+                        android:id="@+id/action_takeSpecimenPhoto"
+                        android:layout_width="match_parent"
+                        android:layout_height="128dp"
+                        android:src="@drawable/ic_camera_roll_black_48dp"/>
+
+                    <ImageButton
+                        android:id="@+id/action_deleteSpecimenPhoto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_delete_black_48dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/action_launchCamera"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_camera_alt_black_48dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/action_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/action_save"/>
+
+
+</LinearLayout>

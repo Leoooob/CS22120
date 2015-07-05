@@ -1,0 +1,153 @@
+\documentclass[12pt]{article}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{graphicx,tabularx,ragged2e,float,pgfgantt,lscape,vhistory,listings,fancyhdr,lastpage}
+
+\pagestyle{fancy}
+\setlength{\headheight}{14.5pt}
+\fancypagestyle{headerfooter} {
+	\fancyhf{}
+	\lhead{\footnotesize{Group 9 - Project Maintenance Manual}}
+	\rhead{\footnotesize{Version 1.2}}
+	\lfoot{\footnotesize{Aberystwyth University / Computer Science}}
+	\rfoot{\footnotesize{Page \thepage~of \pageref{LastPage}}}
+}
+
+\definecolor{lgreen}{HTML}{AEE59B}
+\definecolor{dgreen}{HTML}{6DAE56}
+\definecolor{sgreen}{HTML}{F5F5F5}
+
+\definecolor{dkgreen}{rgb}{0, .6, 0}
+\definecolor{dkblue}{rgb}{0, 0, .6}
+
+\definecolor{dkyellow}{cmyk}{0, 0, .8, .3}
+
+
+\begin{document}
+
+\title{Group 9 \protect\\ App Design Specification}
+\author{Anna Laura Zielinska \and John Batty \and John Friend \and Jack Cridland \and Kamil Lewinsky \and Leon Hassan \and Punit Shah \and Rowan Alexander}
+
+ \maketitle
+ \thispagestyle{headerfooter}
+ \pagestyle{headerfooter}
+ 
+  \begin{center}
+ Config Ref:SE\_09\_DE\_01 \\
+ Version: 1.1 \\
+ Status: Release\\
+ ~\\
+  Department of Computer Science\\
+  Aberystwyth University\\
+  Aberystwyth\\
+  Ceredigion\\
+  SY23 3DB\\
+  Copyright \textcopyright~Aberystwyth University
+ \end{center}
+ 
+\clearpage
+
+\tableofcontents
+\clearpage
+
+\section{Introduction}
+
+	\subsection{Purpose of this Document}
+    The purpose of this document is to describe how we intend to structure the code of the app. This is to allow someone to quickly get accustomed to how our app was designed.
+	\subsection{Scope}
+    This document will cover how we structured our app and why we did so. It is not intended to be a maintenance guide nor cover the implementation in detail; it will look only at high-level design.
+    
+    
+	\subsection{Objectives}
+	The objectives of this document are to provide a comprehensive understanding of our code architecture without the in-depth knowledge of someone who worked on it. 
+
+\section{Decomposition description}
+
+	\subsection{Programs in system}
+    There will be two ‘programs’ in the final app, one representing the back end of the app and one representing the front end of the app. The backend will be where the main functions of the app will run, such as creating and storing reserves, storing pictures, searching for a location etc. while the frontend will be where the layout and the buttons will run. The back end files will all be java files while all the front end files will be xml files.
+	\subsection{Significant classes}
+	    \subsubsection{Backend classes}
+The app will be made by having four activity class, which are: MainActivity, RecorderDetailsActivity, SpeciesDetails and SpeciesList. There will also be a local database file called LocalDatabase. There are also three reserve files called Recording, Reserve and Species. Finally there is also a WebsiteUploadService file.
+
+	    \subsubsection{Frontend classes}
+        For the java files: MainActivity, RecorderDetailsActivity, SpeciesDetails and       SpeciesList there is an xml version of the file (named activitymain, activityrecorderdetails, activityspecieslist and speciesdetails respectively). As well as these xml files there are the files: listitemrecording, simpledropdownitem, specieslist, dimens, strings, styles and AndroidManifest.
+	\subsection{Shared modules between programs}
+    In this app the four activity java classes determines the main functions of the app while the activity xml files determines the layout and overall look of each of the activities.  
+	\subsection{Mapping from requirements to classes}
+In order for this app to be a success it needs to complete the requirements specified in the project specification. The main objective of our app is that it can create new and edit recorder details and species details while using the android device to obtain the users GPS coordinates, as well as being able to take a picture of the plant and uploading the details to an online database. The app will begin by checking if the users GPS is on as its needed in the app, if it’s not then a popup window with a link to the users settings will be provided, if yes then the app will start using the users device to get the GPS coordinates as it can take some time to get an accurate reading. Once the user has completed and saved the new recording it will be uploaded straight to the online database for use on the website.
+
+\section{Dependency description}
+
+	\subsection{Component diagram}
+    	\subsubsection{program 1}
+        \includegraphics [scale=0.8]{componantDiagram.png}
+    	\subsubsection{program 2...}
+	\subsection{Inheritance relationships}
+
+\includegraphics {entity-relationship.png}
+\section{Interface description}
+
+	\subsection{Class 1 interface specification}
+    One of the biggest aims of the UI is that it doesn’t look cluttered with irrelevant bits of information and links as well as a sensible colour scheme that also links in with the theme of our app so the user isn’t put off by the presentation. It is also important that the look, colour scheme and layout of the app remains consistent throughout the entirety of its use in order for it to look as presentable as possible and easy to use, which is especially important if our app is going to be the kind that goes through multiple times of use. Another area of importance is that the app and the website look similar stylistically in order to make it feel like more a seamless transition for the user. Our main aim of doing this is by keeping a consistent colour scheme which is why the app side and the web side have agreed on the following colours:
+    \begin{itemize}
+\item Light Green (AEE59B) for the background
+\item Dark Green (6DAE56) for the buttons
+\item White (FFF) for the text on the banners
+\item Black (000) for the colour of the text and the top banners
+\end{itemize}
+ The light green and dark green was chosen in relation to the plant theme of the app to make the app seem more tied in with the theme. Also because it would blend well with the thumbnail pictures of flowers taking from the users camera files. A darker green has been chosen for the buttons so that they don’t blend in with the background to avoid confusion. Black has been chosen for the text on the screen as it is more of a standard colour for writing and it is clearly visible when placed on top both the different shades of green.
+
+	\subsection{Class 2 interface specification}
+    In the opening screen of the app the user will be presented with a list of reserves that they have created. They can then either select one to edit or press a button to create a new one. These reserves will be presented as a dropdown list that the user will be able to scroll through. If a reserve has been selected the user will be presented with a drop down list of different recordings that will each be able to edited by selecting them. Once they have been edited and saved they will be placed in local storage until they have been successfully uploaded to the database, this is in the event that the android device isn’t currently connected to the internet. When the editing section of a recording is in view the user is able to add and delete images of the plant through the use of buttons that link to the camera, pulls images from a locally stored gallery and deletes them from the gallery.
+
+
+\section{Detailed design}
+	\subsection{Sequence diagrams}
+    \includegraphics {SequenceDiagram.png}
+	\subsection{Significant algorithms}
+	\subsection{Significant data structures}
+    Our app will have three main custom data structures, intended to represent a single outing to a reserve, a single record taken within a reserve, and a species that has been recorded.
+    
+    A \textbf{Reserve} contains the information gathered from a single trip to a reserve. It will contain the following information:
+    \begin{itemize}
+    	\item The record name, to act as an unique identifier
+        \item The recorder name, to keep track of who created the record.
+    	\item The recorder phone number, for reasons beyond me.
+        \item The recorder email, also for reasons beyond me.
+        \item The date taken in YYYY/MM/DD format, to keep track of when each record was taken.
+        \item The reserve name, so we know where each record was taken.
+        \item The list of recordings taken at this record.
+    \end{itemize} \bigskip
+    
+    A \textbf{Recording} contains the information gathered about specific sample or species, taken at a specific record. It will contain the following information:
+    \begin{itemize}
+    	\item An optional photo of the specimen.
+        \item An optional photo of the general environment of the specimen.
+        \item An abundance score using the DAFOR scale. 
+        \item A GPS location in the ??? format
+        \item A species name, common name or Latin name.
+        \item An extra notes section, allowing the user to add extra information they believe is required or would be helpful.
+    \end{itemize} \bigskip
+    
+    A \textbf{Species} contains data relevant to a specific species. It will contain the following information:
+    \begin{itemize}
+    	\item The common name of the species.
+        \item The Latin name of the species.
+        \item A 
+    \end{itemize}    
+    
+   
+    
+
+
+\section{References}
+
+
+
+
+\begin{versionhistory}
+  \vhEntry{0}{21.01.15}{leh28}{Created document outline}
+  \vhEntry{1.0}{22.01.15}{ram32}{Started populating document}
+  \vhEntry{1.1}{11.02.15}{jac65}{Finished populating document}
+\end{versionhistory}
+
+\end{document}

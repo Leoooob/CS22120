@@ -1,0 +1,93 @@
+Web and App Research
+	
+1. Provide useful content
+  Provide content tht is engaging, relevant and appropriate to the audience.
+  We don't waste resources providing easy access and good usability. 
+  Content in most ways is more important than functionality, navigation and visual design.
+  
+2. Establish user requirements
+  We using all available sources to better understand users requirements.
+  The more information that can be exchanged between developers and users, 
+  the higher probability of havig a successful website and application.
+  The information gathered from exchanges with users can be used to build 'use cases'.
+  Use cases describe the things that users want and need the website and application to be able to do.
+  That provide a specification that produced better user performance and higher user preferences.
+  
+3. Understand and meet user's expectations 
+  Website format meets user expectations, especially related to navigation, content and organization.
+  Users define usability as their perception of how productive organised, easy to use, consistent, 
+  straightforward and efficient it is to accopmlish tasks within a system.
+  The use of familiar formatting and navigation schemes makes it easier for users 
+  to learn and remember the layout of an application and a website.
+  
+4. Focus on performance 
+  Decision about content, format, interaction, navigation, colours and graphics.
+  We focus on achieving a high rate of user performance before dealing with aestetic.
+  Graphics issues tend to have little impact.
+  
+5. Consider user interface issues 
+  Consider as many user interface issues as possible during the design process.
+  Consider numerous usability-realted issues during the creation of the website and application.
+  Include: the context; the types of tasks users will perform on the website and applicaion;
+  the types of computer and connection speeds used; evaluation; the results of usability tests.
+  
+6. Do not display unsolicited windows or graphics
+  We don't have annoying and distracting windows or graphics.
+  
+7. Display information in a usable format
+  Display information and data in a format that doesn't require conversion by the user.
+  Present information to users in the most useful and usable format possible.
+  To accomodate a multinational audience, information provided in multiple formats.
+  
+8. Test Plug-Ins and applets for accessibility
+  To ensure accessibility, test any applets, plug-ins 
+  to interpret content to ensure that they can be used by assistive technologies.
+  
+9. Design for common browsers
+  Design, develop and test for the most common browsers.
+  
+10. Enable access to the homepage
+  Enable users to access the homepage from the other page on the website.
+  Create an easy and obvious way for users to quiclky return to the homepage of the website from any point in the site.
+  Include a link labeled 'Home' near the top of the page to help users.
+  
+12. Establish level of importance (if needed)
+  Establish a high-to-low level of importance for information and infuse this approach thoughout each page on the website.
+  The page layout help users find and use the most important information.
+  Information presented in the order that is most useful to users.
+  
+13. Choose appropriate line lengths
+  Display continous text in columns containing and least fifty characters per line.
+  
+14. Use appropriate menu types
+  Use sequential menus for simple forward-moving tasks.
+  Require items to be selected from a series of menus in some predetermined order.
+  After each selection is made, another menu opens. The final choice is constrained by the sum total of all previous choices.
+  
+15. Use clear category labels 
+  The category labels, including links, reflect the information and items contained within the category.
+  Category titles must be understood by typical users.
+  
+16. Link to related content 
+  Provide links to other pages in the website with relate content.
+  Provide a full list of options to related content.
+  
+17. Match link names with their destination pages
+  Make the link text consistent with the title or headings on the destination page.
+  Closely matched links and destination targents help provide the necessary feedback to users 
+  that they have reached the intended.
+  
+18. Use familiar fonts
+Use a familiar font to achieve the best possible easy reading.
+
+19. Use at least 12-point font
+
+20. Include logos 
+  Place a logo in a consistent place on every page.
+  Having a logo on each page provides a frame of reference throughout an application and a website.
+  Same location of the logo on every page.
+  
+21. Organize information clearly
+Organize information at each level, it shows a clear and logical structure to typical users.
+Information well-organised.
+

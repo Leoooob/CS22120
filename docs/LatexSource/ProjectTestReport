@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{graphicx,tabularx,ragged2e,float,pgfgantt,lscape,vhistory,listings,pdfpages,fancyhdr,lastpage}
+
+\pagestyle{fancy}
+\setlength{\headheight}{14.5pt}
+\fancypagestyle{headerfooter} {
+	\fancyhf{}
+	\lhead{\footnotesize{Group 9 - Project Maintenance Manual}}
+	\rhead{\footnotesize{Version 1.2}}
+	\lfoot{\footnotesize{Aberystwyth University / Computer Science}}
+	\rfoot{\footnotesize{Page \thepage~of \pageref{LastPage}}}
+}
+
+\definecolor{lgreen}{HTML}{AEE59B}
+\definecolor{dgreen}{HTML}{6DAE56}
+\definecolor{sgreen}{HTML}{F5F5F5}
+
+\definecolor{dkgreen}{rgb}{0, .6, 0}
+\definecolor{dkblue}{rgb}{0, 0, .6}
+
+\definecolor{dkyellow}{cmyk}{0, 0, .8, .3}
+
+
+\begin{document}
+
+\title{Group 9 \protect\\ Project Test Report}
+\author{Anna Laura Zielinska \and Geraint Thomas \and John Batty \and John Friend \and Jack Cridland \and Kamil Lewinsky \and Leon Hassan \and Punit Shah \and Rowan Alexander Marshall \and Tomos Goralczyk}
+
+ \maketitle
+ \thispagestyle{headerfooter}
+ \pagestyle{headerfooter}
+ 
+ \begin{center}
+ Config Ref:SE\_09\_TE\_01 \\
+ Version: 1.2 \\
+ Status: Release\\
+ ~\\
+  Department of Computer Science\\
+  Aberystwyth University\\
+  Aberystwyth\\
+  Ceredigion\\
+  SY23 3DB\\
+  Copyright \textcopyright~Aberystwyth University
+ \end{center}
+\clearpage
+
+\includepdf[pages={-}]{Test_Ref.pdf}
+
+\section{References}
+
+\begin{versionhistory}
+	\vhEntry{0}{21.01.15}{ram32}{Created document outline}
+    \vhEntry{1}{15.02.15}{ram32} {Table imported and added}
+\end{versionhistory}
+    
+    
+\end{document}    

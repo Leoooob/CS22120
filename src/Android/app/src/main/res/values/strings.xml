@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name" translatable="false">RPSRRec</string>
+    <string name="Create" translatable="false">Create</string>
+    <string name="Record" translatable="false">John and Jacks Record</string>
+
+    <!-- Actions -->
+    <string name="action_addRecording">Create recording</string>
+    <string name="action_settings" translatable="false">Settings</string>
+    <string name="action_uploadReserve">Upload reserve</string>
+    <string name="action_deleteReserve">Delete reserve</string>
+    <string name="action_save">Save recording</string>
+    <string name="action_deleteRecording">Delete recording</string>
+
+    <!-- Form headers -->
+    <string name="header_speciesDetails">Species Details</string>
+    <string name="header_recordingDetails">Recording Details</string>
+
+    <!-- Form hints -->
+    <string name="hint_speciesLatinName">Latin name</string>
+    <string name="hint_speciesCommonName">Common name</string>
+    <string name="hint_speciesAuthority">Authority</string>
+    <string name="hint_recordingComment">Comment</string>
+    <string name="hint_speciesAbundance">Abundance</string>
+    <string name="hint_speciesLocation">Location: </string>
+    <string name="hint_speciesDate">Date: </string>
+    <string name="hint_speciesPhotos">Photos</string>
+
+    <!-- Activity titles -->
+    <string name="activity_reserves">Reserves</string>
+    <string name="activity_species_list">Recordings</string>
+    <string name="activity_species_details">Recording</string>
+
+    <string name="title_activity_recorder_details" translatable="false">Reserve Details</string>
+       
+
+    <string name="title_activity_recorders_details" translatable="false">Reserve Details</string>
+    <string name="Reserve_Name" translatable="false">Reserve Name: </string>
+    <string name="Name" translatable="false">Users Name: </string>
+    <string name="Email" translatable="false">Email: </string>
+    <string name="Phone" translatable="false">Phone: </string>
+    <string name="Reserve_Grid_Reference" translatable="false">Reserve OS grid reference: </string>
+    <string name="Reserve_Description" translatable="false">Description: </string>
+    <string name="Date" translatable="false">Date: </string>
+    <string name="Next" translatable="false">Next</string>
+    
+    
+    <string name="title_activity_other_details" translatable="false">Other Details</string>
+    <string name="TypLoc" translatable="false">Typical Location: </string>
+    <string name="SpecName" translatable="false">Species Name: </string>
+    <string name="OtherInfo" translatable="false">Other Information: </string>
+    <string name="Done" translatable="false">Done</string>
+    <string name="Another" translatable="false">Another</string>
+    
+    
+    <string name="title_activity_species_list" translatable="false">Species List</string>
+    <string name="flower" translatable="false">Red Flower</string>
+    <string name="Edit" translatable="false">Edit</string>
+    <string name="Upload" translatable="false">Upload</string>
+    
+    
+    <string name="title_activity_species_details" translatable="false">Species Details</string>
+    <string name="Spec" translatable="false">Specimen: </string>
+    <string name="Loc" translatable="false">Location: </string>
+    <string name="Abun" translatable="false">Abundance: </string>
+    <string name="Details" translatable="false">Details: </string>
+    <string name="Return" translatable="false">Return</string>
+    
+    
+    <string name="title_activity_delete_popup" translatable="false">Delete POP-UP</string>
+    <string name="delete" translatable="false">Do You wish to Delete or Edit?</string>
+    <string name="deleteYes" translatable="false">Delete</string>
+    <string name="editNo" translatable="false">Edit</string>
+    
+        
+    <string name="title_activity_photos" translatable="false">Photos</string>
+    <string name="Locations" translatable="false">Locations</string>
+    <string name="Specimens" translatable="false">Specimens</string>
+    <string name="DAFOR_prompt">Choose an Abundance</string>
+    <string-array name="DAFOR_Array">
+        <item>D for Dominant</item>
+        <item>A for Abundant</item>
+        <item>F for Frequent</item>
+        <item>O for Occasional</item>
+        <item>R for Rare</item>
+    </string-array>
+    <string name="DAFOR_value" translatable="false">DAFOR</string>
+    <string name="dialog_message_uploadingReserveToWebsite">Uploading reserve to the website</string>
+
+</resources>

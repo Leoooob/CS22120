@@ -1,0 +1,10 @@
+This file should be added to if anyone has a small task which, while not
+a deliverable or anything, would make things generally useful. If anyone has
+any further questions, bring them up in the next team meeting.
+
+- Rowan AJ Marshall
+
+--------------------------------------------------------------------------------
+
+- Create Latex template suitable for us in most/all deliverables
+ 

@@ -1,0 +1,108 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx,vhistory,float,fancyhdr,lastpage}
+\usepackage[a4paper,left=3cm,right=3cm]{geometry}
+
+\pagestyle{fancy}
+\setlength{\headheight}{14.5pt}
+\fancypagestyle{headerfooter} {
+	\fancyhf{}
+	\lhead{\footnotesize{Group 9 - Project Maintenance Manual}}
+	\rhead{\footnotesize{Version 1.1}}
+	\lfoot{\footnotesize{Aberystwyth University / Computer Science}}
+	\rfoot{\footnotesize{Page \thepage~of \pageref{LastPage}}}
+}
+
+
+\begin{document}
+
+\title{Group 9 \protect\\ Database Design Specification}
+\author{Leon Hassan \and Punit Shah \and Tomos Goralczyk}
+
+ \maketitle
+ \thispagestyle{headerfooter}
+ \pagestyle{headerfooter}
+ 
+  \begin{center}
+ Config Ref:SE\_09\_DS\_03 \\
+ Version: 1.1 \\
+ Status: Release\\
+ ~\\
+  Department of Computer Science\\
+  Aberystwyth University\\
+  Aberystwyth\\
+  Ceredigion\\
+  SY23 3DB\\
+  Copyright \textcopyright~Aberystwyth University
+ \end{center}
+ 
+\clearpage
+
+\tableofcontents
+\clearpage
+
+\section{Introduction}
+
+	\subsection{Purpose of this Document}
+    The purpose of this document is to outline the design of our database.
+    
+    \subsection{Scope}
+    
+    \subsection{Objectives}
+    
+\section{Entity Relationship Diagram}
+\begin{figure}[H]
+	\begin{center}
+    	\includegraphics[scale=0.6]{entity-relationship}
+    \end{center}
+    \caption{Entity relationship diagram}
+    \label{fig:entity-relationship}
+\end{figure}
+
+\section{Database Schema}
+    \subsection{Reserves Table}
+    This table holds the information regarding the reserve and the user submitting the reserve.
+
+	\begin{itemize}
+		\item Id INT(11)	PK NN
+		\item name\_reserve VARCHAR(255) NN
+		\item name\_user VARCHAR(255) 	NN
+		\item phone\_number VARCHAR(11) NN
+		\item email VARCHAR(255)	NN
+		\item grid\_reference TEXT	NN
+		\item description TEXT	NN
+	\end{itemize}
+    
+    \subsection{Species Tables}
+    \begin{itemize}
+    	\item id INT(11) PK NN AI
+		\item name\_common VARCHAR(45)
+		\item name\_species VARCHAR(45)	NN
+		\item authority VARCHAR(55)	NN
+		\end{itemize}
+    
+    \subsection{Species Recordings Table}
+    \begin{itemize}
+		\item id INT(11)	PK NN AI
+		\item reserve\_id INT(11)	FK NN
+		\item species\_id INT(11)	FK NN
+		\item location\_lat DOUBLE	NN
+		\item location\_lon DOUBLE	NN
+		\item abundance CHAR(1)	NN
+		\item date DATETIME	NN
+		\item comment TEXT
+		\item general\_photo\_url VARCHAR(255)
+		\item specimen\_photo\_url VARCHAR(255)
+	\end{itemize}
+    
+\section{References}
+N/A
+
+\begin{figure}[b]
+\begin{versionhistory}
+	\vhEntry{0.0}{11.12.14}{ram32}{Created document outline}
+    \vhEntry{1.1}{21.01.15}{pus1}{Added entity relationship diagram}
+\end{versionhistory}
+\end{figure}
+    
+    
+\end{document}

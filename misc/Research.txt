@@ -1,0 +1,25 @@
+Web and App Research
+
+1. Provide useful content (engaging, relevant and appropriate)
+2. Establish user requirements (using all available sources)
+3. Understand and meet user's expectations 
+   (website format meets user expectations, especially related to navigation, content and organisation)
+4. Focus on performance (decision about content, format, interaction, navigation, colours and graphics)
+5. Consider user interface issues (consider numerous usability-realted issues during the creation of the website)
+6. Do not display unsolicited windows or graphics
+7. Display information in a usable format
+8. Test Plug-Ins and applets for accessibility
+9. Design for common browsers
+10. Enable access to the homepage
+11. Limit page length
+12. Establish level of importance (if needed)
+13. Choose appropriate line lengths
+14. Use appropriate menu types
+15. Use clear category labels (must be understood by typical users; category labels with links clearly reflect informations)
+16. Link to related content (provide links to other pages in the website with relate content)
+17. Match link names with their destination pages
+18. Use familiar fonts
+19. Use at least 12-point font
+20. Use simple bacground images
+21. Include logos (place a logo in a consistent place on every page)
+22. Organize information clearly

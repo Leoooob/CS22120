@@ -1,0 +1,1 @@
+Test code is stored in this directory. Unit tests will be stored in a structure which reflects `src`, and `test` may be a subdirectory of `src`. Other test harnesses will be stored in directories related to the specific test at the top level of `test`.

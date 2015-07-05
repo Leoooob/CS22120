@@ -1,0 +1,173 @@
+\documentclass[12pt]{article}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{multicol}
+\usepackage{graphicx,tabularx,ragged2e,float,pgfgantt,lscape,vhistory,listings,fancyhdr,lastpage}
+
+\pagestyle{fancy}
+\setlength{\headheight}{14.5pt}
+\fancypagestyle{headerfooter} {
+  \fancyhf{}
+  \lhead{\footnotesize{Group 9 - Project Maintenance Manual}}
+  \rhead{\footnotesize{Version 1.2}}
+  \lfoot{\footnotesize{Aberystwyth University / Computer Science}}
+  \rfoot{\footnotesize{Page \thepage~of \pageref{LastPage}}}
+}
+
+\definecolor{lgreen}{HTML}{AEE59B}
+\definecolor{dgreen}{HTML}{6DAE56}
+\definecolor{sgreen}{HTML}{F5F5F5}
+
+\definecolor{dkgreen}{rgb}{0, .6, 0}
+\definecolor{dkblue}{rgb}{0, 0, .6}
+
+\definecolor{dkyellow}{cmyk}{0, 0, .8, .3}
+
+\begin{document}
+
+\title{Group 9 \protect\\ Website Design Specification}
+\author{Anna Laura Zielinska \and John Batty \and John Friend \and Jack Cridland \and Kamil Lewinsky \and Leon Hassan \and Punit Shah \and Rowan Alexander}
+
+ \maketitle
+ \thispagestyle{headerfooter}
+ \pagestyle{headerfooter}
+
+  \begin{center}
+ Config Ref:SE\_09\_DE\_03 \\
+ Version: 1.2 \\
+ Status: Complete\\
+ ~\\
+  Department of Computer Science\\
+  Aberystwyth University\\
+  Aberystwyth\\
+  Ceredigion\\
+  SY23 3DB\\
+  Copyright \textcopyright~Aberystwyth University
+ \end{center}
+
+\clearpage
+
+\tableofcontents
+\clearpage
+
+\section{Introduction}
+
+  \subsection{Purpose of this Document}
+    The purpose of this document is to explain the design aspects of the site, the interface style and general information about the site and the design diagrams used, in order to plan out a process to achieve a stable and functional site. It will allow someone to quickly view and understand the process for the site.
+
+  \subsection{Scope}
+    The document will also explain how will structure our site and how we deiced to layout our files in the public directory. It will also go into design diagrams to help understand how the site will be created
+
+  \subsection{Objectives}
+    the objective of this document is to allow someone understand the functions of the site without someone with in depth knowledge on how the site was created and every script of php in the site.
+
+
+\section{Decomposition description}
+
+  \subsection{Significant classes}
+    The way, which the site is going to be generated, is by having 4 files (minus the potential PHP classes for database connection). These 4 files are index, header, core and footer.
+The idea is to generate all of your pages on the fly, in one php file. This isn’t ethical programming (from an object oriented standpoint), but this is in web development. The only code that our index page will require is:
+
+\begin{lstlisting}[language=php]
+  <?php
+    Require_once ‘header.php’;
+    Require_once ‘core.php’;
+    Require_once ‘footer.php’;
+  ?>
+  \end{lstlisting}
+
+This code loads up the three main components of the page and loads it into the current page, this means that the actual page you are on does not change at all on your visit. The page actually acts as a shell for which we then load information into for the user. The header and footer files will be the same for all pages but the core will not. The core will have all the functions, variables, methods etc, so that the site is being generated and understands where the user currently is in the site.
+This way, the site will have a core structure where everything, which isn’t set and can be changed, will be in the core, where it can be pulled and displayed when needed. And things which wont changed, for example the header / footer which will be displaying the same fixed data every time will have its own separate file which will get pulled from the index and sit on top / below the core file. As shown above.
+
+  \subsection{Shared modules between programs}
+    In the site. Most of the code which defines what the page looks like is in the core.php file. There is a if statement which looks into the URL of the site and always knows what to display. Although this was isn't exactly ethical and in code, it is heavily frowned upon; it allows the site to be generated on the fly. Perhaps a way round this could be when the URL is called, the if statement then calls a php while which contains all of the data for the page. but due to the scale of the site. It would be easier and quicker to make a central core.
+
+
+  \subsection{Mapping from requirements to classes}
+    From the project specification; there were a list of functions we had to complete in order to make the site successful to the client. These were FR8 \& FR9.
+
+Firstly, we would need to establish a connection to the database to enable us to manipulate from the server to the website. after we have made a connection to the database we will then need to display all the data from it. This is to show us what data is present from the connection. from there; we will be able to visually edit the way the data is displayed and we can then start to think about how the user navigates around this data and how we and edit, add and delete the records from the website, to the server on a admin level. As users will only be able to view the records, and not add, edit or delete them. Each of the required pieces of data, explained in FR8, will be provided from the server and then we will use a SQL request nested in the PHP script to pull the data from the servers database
+
+Once we have connected to the database, and managed to grab all of the data and display it on the site. We will then begin to shuffle it into a logical sense which the user will be able to view with ease. Because we have gotten all the data we needed form the database, this includes:
+
+\begin{itemize}
+\begin{multicols}{2}
+  \item Latin name
+  \item List of all recordings
+  \item Recorders name / details
+  \item Date
+  \item Abundance
+  \item Description
+  \item Common name
+  \end{multicols}
+\end{itemize}
+
+When it comes to filtering the list of species in alphabetical order for the Latin name will be a simple PHP line which will tell the received data to shuffle into A-Z descending order.
+The main "Speed bump" will be adding, editing and deleting reserves and the records inside the reserves. As this will require a HTTP request to push the new data from the site to the database.
+
+\section{Dependency description}
+
+  \subsection{Description}
+    For the website, the biggest dependency was the database. It is very difficult to code a website which will be pulling data from a different location inside hard coded inside the file. Such as HTML for example; as we are working with PHP, we are able to perform connections to a SQL database, which will be able to pull and push data from the database. But as said before; how can we manipulate data if there is no data to manipulate
+The website has no real link to the android app, besides that both the site and the app has the ability to connect to the database and edit data inside. What this means is if there is a update for the app, or something happens to the app. The site will still be able to function completely and without errors. Vis versa. However, if the database were to fail, then the whole system would fail and would no longer work.
+
+    \subsection{Component diagram}
+    \includegraphics[scale=0.65]{Component_Diagram.png}
+
+  \subsection{Inheritance relationships}
+  \includegraphics{GYvHj4BWTSqLrCfmwvcL_entity-relationship__1_.png}
+
+\section{Interface Description}
+
+  \subsection{Interface specification}
+    The aim for the interface of the site is to make sure it is clean looking and it doesn’t confuse the user, considering it is made to display confusing data so it would be a bad idea to further confuse them with a site which doesn’t behave naturally. The way this can be achieved is by making sure each page looks similar to the rest. Once the user knows where they are and what the site looks like, you don’t want to be throwing them off by completely changing the house style of the site.
+We will have a NavBar at the top of the page, fixed position, that will help the user switch back to the home page or to the about page, very quickly, which could be needed if the user doesn’t want to look at specimen in the current reserve but wants to look at one in another. It will also display the name of the site to them ensure them that they haven’t left the site when they click on a hyperlink to navigate the site.
+
+\begin{itemize}
+  \item Light Green \textcolor{lgreen}{(\#AEE59B)} for the background
+  \item Dark Green \textcolor{dgreen}{(\#6DAE56)} For the borders and details
+  \item White (\#F5F5F5) For the background of text (EG. the main content of the page)
+  \item Black (\#000) For the colour of the text\ldots
+\end{itemize}
+
+These colours were chosen because, being a site which will display records about plants, it seems natural to have a tint of green to it. The scheme for these two colours are that the light green will be placed as a background primarily. Whereas the dark green will be used as a highlighter, for the tables and for the NavBar. This will help the user distinguish where they are at any time. You will notice in the index that the mouse is hovering over the table of the second entry, which is making the whole row highlight the dark green, and changing the font colour. This happens for the NavBar also.
+
+The footer and header have a background colour which isn't either of the greens, nor is it white. It is in fact (\#F5F5F5). Using this colour instead of complete white (\#FFF) will help highlight the areas we need the user to see, which will be in the centre of the screen. So when there is text which is white or black. They will stand out more, instead of the user being drawn to these two blinding white blocks at the top and bottom of the screen.
+
+When the admin wants to add a specimen, they will have to navigate to the Inside Reserve page. From there, the user will simply click the Add button located above the table. Here the user will be able to fill in the required data, which will be checked by JavaScript to make sure the data is correct at a basic level. The Abundance field will be a drop done box to further stop human error on the users behalf by inputting wrong data into the system. Similarly, the user can edit the specimen. They do this by navigating to the specimen they wish to edit. And from there, click on the Edit button located at the top of the page. This link will take the user to a page which will look similar to the Add specimen page. However, the data in the HTML forms will already have data in them, this being the same data the user saw in the last page. But this time the user can click on the forms which they want to edit and click on the Save Changes button located at the top of the page again. This will throw out a pop up message (alert) to say the changes have been saved and updated.
+
+Do note; that in the images shown in this section have some areas which have objects in them which have 50\% opacity, this is because they are dependent on other parts of the page. The delete button (found in Index and Inside Reserve) will only show when the user clicks on the tick box on the row of the reserve or specimen they which to delete. There is another object which is found on this page, these images are also dependent because the number of photos you can attach to a specimen range from 0 to many (no hard limit as of yet). It could have 1, 4, 30, or it could have none.
+
+\subsection{Flow plan of the site}
+\includegraphics[scale=0.2]{FlowPLAN.png}
+
+\subsection{Index plan of the site}
+\includegraphics[scale=0.2]{IndexPLAN.png}
+
+\subsection{Inside of a reserve plan}
+\includegraphics[scale=0.2]{InsideReservePLAN.png}
+
+\subsection{Inside of a specimen plan}
+\includegraphics[scale=0.2]{InsideSpecimenPLAN.png}
+
+\subsection{Adding a Specimen to the database}
+\includegraphics[scale=0.2]{AddSpecimenPLAN.png}
+
+\section{Detailed design}
+  \subsection{Sequence diagram}
+    \includegraphics[scale=0.55]{10942877_843990792332206_392404273_n.jpg}
+
+
+\section{References}
+
+
+\begin{versionhistory}
+  \vhEntry{0.1}{21.01.15}{leh28}{Created document outline}
+  \vhEntry{0.4}{22.01.15}{jof26}{Completed Section: 2.2 \& 3.1 \& 3.2 \& 4.1}
+  \vhEntry{0.7}{23.01.15}{jof26}{Completed Section: 2.3 \& 2.4 \& 5.1}
+  \vhEntry{1.0}{08.02.15}{jof26}{Completed section: 1.1 \& 1.2 \& 1.3 - All Sections Completed}
+  \vhEntry{1.1}{11.02.15}{jof26}{Added images of interface plan to section 4}
+  \vhEntry{1.2}{16.02.15}{jof26}{Updated "Theme" Of the document}
+
+\end{versionhistory}
+
+\end{document}
